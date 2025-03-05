@@ -16,7 +16,7 @@ const Login = () => {
   });
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow">
+    <div className="max-w-md mx-auto mt-10 p-6 bg-slate-200 rounded-lg shadow">
       <h1 className="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h1>
       <Formik
         initialValues={{ email: "", password: "" }}
@@ -41,7 +41,7 @@ const Login = () => {
               <Field
                 name="email"
                 type="email"
-                className="mt-1 block w-full rounded border-gray-300"
+                className="mt-1 block w-full rounded border-black-300 "
               />
               <ErrorMessage
                 name="email"
@@ -67,7 +67,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary text-white py-2 px-4 rounded hover:bg-primary-dark"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-400"
             >
               Iniciar Sesión
             </button>
