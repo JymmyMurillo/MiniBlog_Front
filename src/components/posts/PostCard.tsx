@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Post } from "../../store/slices/postSlice";
+import { Post } from "../../types";
 
 const PostCard: React.FC<{ post: Post }> = ({ post }) => {
   return (
