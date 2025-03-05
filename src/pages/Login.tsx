@@ -23,8 +23,13 @@ const Login = () => {
         validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting }) => {
           try {
-            const { data } = await loginUser(values);
-            dispatch(setCredentials(data.data));
+            const response = await loginUser(values);
+            dispatch(
+              setCredentials({
+                user: response.data.user,
+                token: response.data.token,
+              })
+            );
             navigate("/");
             toast.success("Sesión iniciada correctamente");
           } catch (error) {
