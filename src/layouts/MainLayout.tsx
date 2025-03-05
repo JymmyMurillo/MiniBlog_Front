@@ -2,8 +2,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { logout } from "../store/slices/authSlice";
+import { Outlet } from 'react-router-dom' // Importar Outlet
 
-const MainLayout = ({ children }: { children: React.ReactNode }) => {
+const MainLayout = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state: RootState) => state.auth);
   const navigate = useNavigate();
@@ -43,7 +44,9 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+      <main className="max-w-6xl mx-auto px-4 py-8">
+        <Outlet />
+      </main>
     </div>
   );
 };

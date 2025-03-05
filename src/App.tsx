@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./components/common/ProtectedRoute";
-import MainLayout from "./layouts/MainLayout";
-import Login from "./pages/Login";
+import MainLayout from "./layouts/MainLayout.tsx";
+import Login from "./pages/Login.tsx";
 import Register from "./pages/Register";
-import Posts from "./pages/Posts";
-import PostDetail from "./pages/PostDetail";
-import CreatePost from "./pages/CreatePost";
+import Posts from "./pages/Posts.tsx";
+import PostDetail from "./pages/PostDetail.tsx";
+import CreatePost from "./pages/CreatePost.tsx";
 
 function App() {
   return (
