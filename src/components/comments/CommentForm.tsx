@@ -49,7 +49,7 @@ const CommentForm: React.FC<Props> = ({ postId }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="mt-2 bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark"
+              className="mt-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-400"
             >
               {isSubmitting ? "Publicando..." : "Publicar comentario"}
             </button>
