@@ -77,6 +77,24 @@ export const deletePost = createAsyncThunk<
   }
 })
 
+export const createComment = createAsyncThunk(
+  "posts/createComment",
+  async (
+    { postId, content }: { postId: number; content: string },
+    { rejectWithValue }
+  ) => {
+    try {
+      const response = await api.post(`/posts/${postId}/comments`, { content });
+      return response.data.data;
+    } catch (error) {
+      const err = error as { response?: { data: ApiError } };
+      return rejectWithValue(
+        err.response?.data || { message: "Error al crear comentario" }
+      );
+    }
+  }
+);
+
 const postSlice = createSlice({
   name: 'posts',
   initialState,

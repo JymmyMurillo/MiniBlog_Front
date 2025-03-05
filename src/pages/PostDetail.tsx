@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../hooks/storeHooks";
+import { useAppDispatch, useAppSelector } from "../hooks/storeHooks.ts";
 import { fetchPosts, selectPostById } from "../store/slices/postSlice";
-import CommentList from "../components/comments/CommentList";
-import CommentForm from "../components/comments/CommentForm";
+import CommentList from "../components/comments/CommentList.tsx";
+import CommentForm from "../components/comments/CommentForm.tsx";
 import PostCard from "../components/posts/PostCard";
 
 const PostDetail = () => {
